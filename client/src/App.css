@@ -1,4 +1,70 @@
-body{
-  background-color: antiquewhite;
+body {
   text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+h1, h2{
+  letter-spacing: .1rem;
+  font-weight: 500;
+}
+
+h1{
+  font-size: 3rem;
+
+}
+
+h2{
+  font-size: 2rem;
+}
+.heading, .phone{
+  margin:50px;
+}
+.container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.grandma-img{
+height: 250px;
+}
+.phonecase{
+  display: inline-block;
+  border: solid 2px black;
+  border-radius: 30px;
+}
+.phonescreen{
+  display:flex;
+justify-content: center;
+align-items: center;
+  height: 200px;
+  border: solid 2px black;
+  border-radius: 30px;
+  margin:15px;
+}
+.onscreen{
+  max-width: 200px;
+  word-wrap:break-word;
+}
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 80px 80px 80px;
+  font-size: 1.5rem;
+  padding: 0 5px;
+  padding-bottom: 5px;
+}
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 15px;
+  margin: 5px 10px;
+}
+
+.hidden{
+  border: none;
+  color: white;
+  }

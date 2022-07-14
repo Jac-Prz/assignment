@@ -1,11 +1,13 @@
-
+import Heading from './components/Heading'
+import Phone from './components/Phone'
 import './App.css';
 
 function App() {
   return (
-    <div>
-      <h1>Assignment</h1>
-
+    <div className="container">
+    <Heading />
+    <Phone />
+      
     </div>
   );
 }
