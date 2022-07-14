@@ -3,12 +3,41 @@ import React, { useState } from "react";
 function Phone() {
 
     const [typedNumbers, setTypedNumbers] = useState("");
-    
+    const [possibleWords, setPossibleWords] = useState([]);
 
-    function keypress(e) {
-            setTypedNumbers(typedNumbers + e.target.id)
+    const keypress = (e) => {
+        setTypedNumbers(typedNumbers + e.target.id)
     };
 
+    const submit = async () => {
+        const numbers = typedNumbers;
+        console.log(numbers);
+        alert("Watch out! Grandma's trying to txt");
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ string: numbers })
+        };
+
+        fetch('http://localhost:3001/api', requestOptions)
+        .then(function (response) {
+            if (!response.ok) {
+              throw new Error('Bad status code from server.');
+            }
+            return response.json();
+          })
+          .then(function(res){
+                console.log(res);
+                const wordList = res.words;
+                console.log(wordList);
+                setPossibleWords(wordList);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+            setTypedNumbers("");
+    }
 
     return (
         <div className="phone">
@@ -27,10 +56,11 @@ function Phone() {
                     <div className="key" onClick={keypress} id="8">8</div>
                     <div className="key" onClick={keypress} id="9">9</div>
                     <div className="key hidden" id="*">*</div>
-                    <div className="key" onClick={keypress} id="_"> </div>
+                    <div className="key" onClick={submit} id="_"> </div>
                     <div className="key hidden" id="#">#</div>
                 </div>
             </div>
+            <p>{possibleWords}</p>
         </div>
     );
 }
