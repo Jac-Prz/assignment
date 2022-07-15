@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const logic = require('./logic');
-const dictionary = require('./dictionary');
+
 
 const app = express();
 
@@ -17,20 +17,9 @@ app.get('/', (req, res) => {
 app.post('/api', (req, res) => {
 const stringDigits = req.body.string;
 const response = {words: logic(stringDigits)};
+console.log("wordlist = " + logic(stringDigits))
 res.end(JSON.stringify(response));
 });
-
-app.post('/dictionary', (req, res) => {
-const recievedArray = req.body.strings
-console.log(recievedArray);
-
-console.log(dictionary("one"));
-
-const response = {words: ["one", "two", "three"]};
-res.end(JSON.stringify(response));
-
-
-})
 
 const PORT = 3001;
 
