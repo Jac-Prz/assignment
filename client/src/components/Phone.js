@@ -24,8 +24,10 @@ function Phone() {
 
     function firstFetch() {
         const numbers = typedNumbers;
-        console.log(numbers);
+        console.log(numbers);   //first console.log
         alert("Watch out! Grandma's trying to txt");
+        setPossibleWords(["Calculating...slow like Grandma"])
+        
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -40,23 +42,26 @@ function Phone() {
                 return response.json();
             })
             .then(function (res) {
-                console.log(res);
                 const wordList = res.words;
                 console.log(wordList);
-                setPossibleWords(wordList);
+                if (wordList.length === 0){
+                    setPossibleWords(["No possible words"]);
+                } else {
+                    setPossibleWords(wordList);
+                }
+                
             })
             .catch((err) => {
                 console.log(err);
             });
 
         setTypedNumbers("");
-        console.log(possibleWords[1]);
-    };
+         };
 
 
 const scrollForward = () => {
     setDisplayedWordCount(() => {
-        if (displayedWordCount === possibleWords.length) {
+        if (displayedWordCount === possibleWords.length-1) {
             return 0;
         } else {
             return (displayedWordCount + 1);
@@ -67,7 +72,7 @@ const scrollForward = () => {
 const scrollBackward = () => {
     setDisplayedWordCount(() => {
         if (displayedWordCount === 0) {
-            return possibleWords.length;
+            return possibleWords.length-1;
         } else {
             return (displayedWordCount - 1);
         }
