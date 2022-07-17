@@ -39,6 +39,7 @@ module.exports = function getWordList(numbers) {
         newCombination.push(item + nextLetters[0]);
         newCombination.push(item + nextLetters[1]);
         newCombination.push(item + nextLetters[2]);
+        newCombination.push(item + nextLetters[3]);
       });
       possibleCombinations = newCombination;
     }

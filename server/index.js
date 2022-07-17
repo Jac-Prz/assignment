@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.post('/api', (req, res) => {
     const stringDigits = req.body.string;
-    
+    console.log( logic(stringDigits));
 
     actualWords = words.getValidWords(logic(stringDigits));
 
