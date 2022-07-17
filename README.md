@@ -1,3 +1,5 @@
+NOTE: WORDMODULE BRANCH IS A BETTER VERSION
+
 To start:
 Inside client directory
 - to install dependancies: npm install
