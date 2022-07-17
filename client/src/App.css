@@ -54,14 +54,28 @@ align-items: center;
   padding: 0 5px;
   padding-bottom: 5px;
 }
-.key {
+.key{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 50px;
   border: 3px solid;
   border-radius: 15px;
   margin: 5px 10px;
+}
+.key:hover{
+  background-color: lightgrey;
+}
+.number{
+  padding: 0 25px;
+  padding-top: 3px;
+  padding-bottom: 20px;
+
+}
+.letters{
+  margin-top: -20px;
+  font-size: .8rem;
 }
 .nav-arrow{
   height:20px;

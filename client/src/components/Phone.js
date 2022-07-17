@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-
-
 function Phone() {
 
     const [typedNumbers, setTypedNumbers] = useState("");
@@ -91,14 +88,14 @@ return (
             </div>
             <div className="grid" >
                 <div className="key" id="1">1</div>
-                <div className="key" onClick={keypress} id="2">2</div>
-                <div className="key" onClick={keypress} id="3">3</div>
-                <div className="key" onClick={keypress} id="4">4</div>
-                <div className="key" onClick={keypress} id="5">5</div>
-                <div className="key" onClick={keypress} id="6">6</div>
-                <div className="key" onClick={keypress} id="7">7</div>
-                <div className="key" onClick={keypress} id="8">8</div>
-                <div className="key" onClick={keypress} id="9">9</div>
+                <div className="key"><div className="number" onClick={keypress} id="2">2</div><div className="letters">a b c</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="3">3</div><div className="letters">d e f</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="4">4</div><div className="letters">g h i</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="5">5</div><div className="letters">j k l</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="6">6</div><div className="letters">m n o</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="7">7</div><div className="letters">p q r s</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="8">8</div><div className="letters">t u v</div></div>
+                <div className="key"><div className="number" onClick={keypress} id="9">9</div><div className="letters">w x y z</div></div>
                 <div className="key" onClick={scrollBackward} id="*"> <img className="nav-arrow" src={process.env.PUBLIC_URL + '/backward.png'} alt="<" /> </div>
                 <div className="key" onClick={submit} id="_"> _</div>
                 <div className="key" onClick={scrollForward} id="#"> <img className="nav-arrow" src={process.env.PUBLIC_URL + '/forward.png'} alt=">" /></div>
