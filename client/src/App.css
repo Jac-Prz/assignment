@@ -1,6 +1,8 @@
 body {
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #d3f8e2;
+  
 }
 
 h1, h2{
@@ -9,20 +11,24 @@ h1, h2{
 }
 
 h1{
-  font-size: 3rem;
+  font-size: 4rem;
+  max-width: 400px;
+  margin:0;
 }
 
 h2{
   font-size: 2rem;
 }
-.heading, .phone{
-  margin:50px;
+.heading{
+  margin: 0 50px;
+}
+.phone{
+  margin:80px 50px;
 }
 .container{
   display:flex;
   align-items: center;
   justify-content: center;
-  margin-top:50px;
 }
 .grandma-img{
 height: 250px;
@@ -31,6 +37,7 @@ height: 250px;
   display: inline-block;
   border: solid 3px black;
   border-radius: 30px;
+  background-color: #f694c1;
 }
 .phonescreen{
   display:flex;
@@ -40,6 +47,7 @@ align-items: center;
   border: solid 3px black;
   border-radius: 30px;
   margin:15px;
+  background-color: #d3f8e2;
 }
 .onscreen{
   max-width: 200px;
@@ -63,6 +71,7 @@ align-items: center;
   border: 3px solid;
   border-radius: 15px;
   margin: 5px 10px;
+  background-color: #EDE7B1;
 }
 .key:hover{
   background-color: lightgrey;
