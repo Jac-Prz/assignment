@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const logic = require('./logic');
 const checkDict = require('./dictionary.js');
-const https = require('https');
-
 
 const app = express();
 
@@ -22,11 +20,11 @@ app.post('/api', (req, res) => {
     const wordsArray = logic(stringDigits)
 
     console.log(wordsArray);
-     wordsArray.forEach(word => {
-        checkDict(word);
-     });
+    //  actualWords = wordsArray.forEach(word => {
+        console.log(checkDict("hello"));
+    //  });
        
-
+// console.log(actualWords);
     const response = { words: logic(stringDigits) };
     res.end(JSON.stringify(response));
 });
